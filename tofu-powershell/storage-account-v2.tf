@@ -48,15 +48,6 @@ resource "azurerm_storage_table" "st" {
   storage_account_name = azurerm_storage_account.sa.name
 }
 
-/*
-data "external" "sas_token" {
-  program = [
-    "${path.module}/generate_sas.sh",
-    azurerm_storage_account.sa.name
-  ]
-}
-*/
-
 data "external" "sas_token" {
   program = [
     "pwsh.exe",
