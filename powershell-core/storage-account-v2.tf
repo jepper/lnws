@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "workshop"
+  name     = var.workshop_name
   location = "westeurope"
   tags     = {
           "BillingIdentifier"   = "00000"
