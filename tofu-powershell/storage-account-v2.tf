@@ -50,7 +50,7 @@ resource "azurerm_storage_table" "st" {
 
 data "external" "sas_token" {
   program = [
-    "pwsh.exe",
+    "powershell.exe",
     "-ExecutionPolicy", "Bypass",
     "-File",
     "${path.module}/generate_sas.ps1",
